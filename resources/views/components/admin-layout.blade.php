@@ -61,23 +61,56 @@
                                                 <a href="{{ route('admin.product.index') }}" class='submenu-link'>Overview</a>
                                             </li>
                                             <li class="submenu-item  ">
-                                                <a href="{{ route('admin.product.create') }}" class='submenu-link'>Upload Baru</a>
+                                                <a href="{{ route('admin.product.list') }}" class='submenu-link'>Daftar Produk</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.product.create') }}" class='submenu-link'>Upload Produk Baru</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
-                            <li class="menu-item  ">
-                                <a href="{{ route('admin.user.index') }}" class='menu-link'>
+                            <li class="menu-item  has-sub">
+                                <a href="#" class='menu-link'>
                                     <i class="bi bi-people-fill"></i>
                                     <span>Pelanggan</span>
                                 </a>
+                                <div class="submenu">
+                                    <div class="submenu-group-wrapper">
+                                        <ul class="submenu-group">
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.user.index') }}" class='submenu-link'>Overview</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.user.list') }}" class='submenu-link'>Daftar Pelanggan</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.user.new') }}" class='submenu-link'>Agen/Reseller Baru</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="menu-item  ">
-                                <a href="{{ route('admin.transaction.index') }}" class='menu-link'>
+                            <li class="menu-item  has-sub">
+                                <a href="#" class='menu-link'>
                                     <i class="bi bi-cash-coin"></i>
                                     <span>Transaksi/keuangan</span>
                                 </a>
+                                <div class="submenu">
+                                    <div class="submenu-group-wrapper">
+                                        <ul class="submenu-group">
+                                            <li class="submenu-item">
+                                                <a href="{{ route('admin.transaction.index') }}" class='submenu-link'>Overview</a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="{{ route('admin.transaction.list') }}" class='submenu-link'>Daftar Transaksi</a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="{{ route('admin.transaction.new') }}" class='submenu-link'>Transaksi Baru</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                             {{-- <li class="menu-item  has-sub">
                                 <a href="#" class='menu-link'>
@@ -693,7 +726,7 @@
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/assets/vendors/apexcharts/apexcharts.js"></script>
-    {{-- <script src="/assets/js/pages/dashboard.js"></script> --}}
+    <script src="/assets/js/pages/dashboard.js"></script>
     <script src="/assets/js/pages/horizontal-layout.js"></script>
     {{ $script ?? null }}
 </body>

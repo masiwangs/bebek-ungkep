@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="content-wrapper container">
         <div class="page-heading">
-            <h3>Produk Bebek Ungkep</h3>
+            <h3>Transaksi/Keuangan Bebek Ungkep</h3>
         </div>
         <div class="page-content">
             <section class="row">
@@ -10,10 +10,10 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Tren Pelanggan</h4>
+                                    <h4>Arus Keuangan</h4>
                                 </div>
                                 <div class="card-body">
-                                    <div id="chart-tren-produk"></div>
+                                    <div id="chart-arus-keuangan"></div>
                                 </div>
                             </div>
                         </div>
@@ -21,45 +21,34 @@
                     <div class="row">
                         <div class="col-12 col-xl-12">
                             <div class="card">
-                                <div class="card-header">
-                                    <h4>Daftar Pelanggan</h4>
+                                <div class="card-header d-flex justify-content-between">
+                                    <h4>Traksaksi Berhasil</h4>
+                                    <a href="" class="btn btn-sm my-0 text-primary"><i class="bi bi-eye"></i> Lihat Semua</a>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-lg">
+                                        <table class="table table-hover table-lg" style="font-size: .8rem">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Comment</th>
+                                                    <th>Kode Trf</th>
+                                                    <th>Kode Invoice</th>
+                                                    <th>Nama Pelanggan</th>
+                                                    <th>Dibayar Pada</th>
+                                                    <th>Dibayar Menggunakan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/5.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Cantik</p>
-                                                        </div>
+                                                    <td>TRF123</td>
+                                                    <td>INV123</td>
+                                                    <td>
+                                                        <p class="mb-0">Maulana Ichwan A</p>
+                                                        <small>Pelanggan Rumahan</small>
                                                     </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Congratulations on your graduation!</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/2.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Ganteng</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Wow amazing design! Can you make
-                                                            another tutorial for
-                                                            this design?</p>
+                                                    <td>19 Juni 2022 - 19:20:22</td>
+                                                    <td>
+                                                        <p class="mb-0">Transfer Bank BRI</p>
+                                                        <small>Rp150.000</small>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -73,38 +62,29 @@
                 <div class="col-12 col-lg-3">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Pelanggan Teratas</h4>
+                            <h4>Transaksi Terbaru</h4>
                         </div>
                         <div class="card-content pb-4">
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/4.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">Hank Schrader</h5>
                                     <h6 class="text-muted mb-0">@johnducky</h6>
                                 </div>
                             </div>
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/5.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">Dean Winchester</h5>
                                     <h6 class="text-muted mb-0">@imdean</h6>
                                 </div>
                             </div>
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/1.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">John Dodol</h5>
                                     <h6 class="text-muted mb-0">@dodoljohn</h6>
                                 </div>
                             </div>
                             <div class="px-4">
-                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua notifikasi</button>
+                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua</button>
                             </div>
                         </div>
                     </div>
@@ -117,34 +97,49 @@
         <script>
             var options = {
                 series: [{
-                    name: 'series1',
-                    data: [31, 40, 28, 51, 42, 109, 100]
-                }, {
-                    name: 'series2',
-                    data: [11, 32, 45, 32, 34, 52, 41]
+                    name: 'Net Profit',
+                    data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
                 }],
                 chart: {
-                    height: 350,
-                    type: 'area'
+                    type: 'bar',
+                    height: 350
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '55%',
+                    },
                 },
                 dataLabels: {
                     enabled: false
                 },
                 stroke: {
-                    curve: 'smooth'
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
                 },
                 xaxis: {
-                    type: 'datetime',
-                    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                },
+                yaxis: {
+                    title: {
+                        text: '$ (thousands)'
+                    }
+                },
+                fill: {
+                    opacity: 1
                 },
                 tooltip: {
-                    x: {
-                        format: 'dd/MM/yy HH:mm'
-                    },
-                },
+                    y: {
+                        formatter: function(val) {
+                            return "$ " + val + " thousands"
+                        }
+                    }
+                }
             };
 
-            var chart = new ApexCharts(document.querySelector("#chart-tren-produk"), options);
+            var chart = new ApexCharts(document.querySelector("#chart-arus-keuangan"), options);
             chart.render();
         </script>
     </x-slot>

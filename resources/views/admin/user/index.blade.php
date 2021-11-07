@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="content-wrapper container">
         <div class="page-heading">
-            <h3>Produk Bebek Ungkep</h3>
+            <h3>Pelanggan Bebek Ungkep</h3>
         </div>
         <div class="page-content">
             <section class="row">
@@ -21,46 +21,29 @@
                     <div class="row">
                         <div class="col-12 col-xl-12">
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-header d-flex justify-content-between">
                                     <h4>Daftar Pelanggan</h4>
+                                    <a href="{{ route('admin.user.list') }}" class="btn btn-sm text-primary my-auto"><i class="bi bi-eye"></i> Lihat Semua</a>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-lg">
+                                        <table class="table table-hover table-lg" style="font-size: .8rem">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Comment</th>
+                                                    <th>Nama</th>
+                                                    <th>Tipe</th>
+                                                    <th>Email</th>
+                                                    <th>Telefon</th>
+                                                    <th>Alamat</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/5.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Cantik</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Congratulations on your graduation!</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/2.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Ganteng</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Wow amazing design! Can you make
-                                                            another tutorial for
-                                                            this design?</p>
-                                                    </td>
+                                                    <td>Maulana</td>
+                                                    <td>Agen</td>
+                                                    <td>maulanaichwana@gmail.com</td>
+                                                    <td>088233010696</td>
+                                                    <td>Gendol, RT 26, Dukuh, Tangen, Sragen 57261</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -77,34 +60,22 @@
                         </div>
                         <div class="card-content pb-4">
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/4.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">Hank Schrader</h5>
                                     <h6 class="text-muted mb-0">@johnducky</h6>
                                 </div>
                             </div>
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/5.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">Dean Winchester</h5>
                                     <h6 class="text-muted mb-0">@imdean</h6>
                                 </div>
                             </div>
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/1.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">John Dodol</h5>
                                     <h6 class="text-muted mb-0">@dodoljohn</h6>
                                 </div>
-                            </div>
-                            <div class="px-4">
-                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua notifikasi</button>
                             </div>
                         </div>
                     </div>

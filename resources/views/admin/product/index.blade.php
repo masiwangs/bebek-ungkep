@@ -26,40 +26,35 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-lg">
+                                        <table class="table table-hover table-lg" style="font-size:.8rem">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Comment</th>
+                                                    <th>Nama</th>
+                                                    <th>Tersedia untuk</th>
+                                                    <th>Harga</th>
+                                                    <th>Min. Pesan</th>
+                                                    <th>Diskon</th>
+                                                    <th>Ongkos Kirim</th>
+                                                    <th>Ongkos Pengemasan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/5.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Cantik</p>
-                                                        </div>
+                                                    <td>Dada Ungkep</td>
+                                                    <td>Agen, Reseller, Industri</td>
+                                                    <td>Rp60.000</td>
+                                                    <td>5pcs</td>
+                                                    <td>
+                                                        <p class="mb-0">5%</p>
+                                                        <small>Minimal 50pcs untuk dapat diskon</small>
                                                     </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Congratulations on your graduation!</p>
+                                                    <td>
+                                                        <p class="mb-0">Rp10.000</p>
+                                                        <small>Minimal 10pcs untuk gratis ongkir</small>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/2.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Ganteng</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Wow amazing design! Can you make
-                                                            another tutorial for
-                                                            this design?</p>
+                                                    <td>
+                                                        <p class="mb-0">Rp10.000</p>
+                                                        <small>Minimal 10pcs untuk gratis pengemasan</small>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -77,34 +72,22 @@
                         </div>
                         <div class="card-content pb-4">
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/4.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">Hank Schrader</h5>
                                     <h6 class="text-muted mb-0">@johnducky</h6>
                                 </div>
                             </div>
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/5.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">Dean Winchester</h5>
                                     <h6 class="text-muted mb-0">@imdean</h6>
                                 </div>
                             </div>
                             <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/1.jpg">
-                                </div>
                                 <div class="name ms-4">
                                     <h5 class="mb-1">John Dodol</h5>
                                     <h6 class="text-muted mb-0">@dodoljohn</h6>
                                 </div>
-                            </div>
-                            <div class="px-4">
-                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua notifikasi</button>
                             </div>
                         </div>
                     </div>
