@@ -1,6 +1,6 @@
 <x-client-layout>
     <div class="content-wrapper container">
-        <div class="page-content">
+        <div class="page-content" id="app">
             <section class="row">
                 <div class="col-12 col-lg-9">
                     <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-bs-ride="carousel">
