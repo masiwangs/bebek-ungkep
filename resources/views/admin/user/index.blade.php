@@ -58,23 +58,60 @@
                         <div class="card-header">
                             <h4>Pelanggan Teratas</h4>
                         </div>
-                        <div class="card-content pb-4">
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Hank Schrader</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
+                        <div class="card-body pb-4">
+                            <div class="list-group-item px-0 border-0">
+                                <div class="row gx-2">
+                                    <div class="col-3">
+                                        <img src="/images/profile.png" class="w-100" alt="singleminded">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="mb-0">Ari</h6>
+                                        <p class="mb-0" style="font-size:.8rem">5.000 pembelian</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Dean Winchester</h5>
-                                    <h6 class="text-muted mb-0">@imdean</h6>
+                            <div class="list-group-item px-0 border-0">
+                                <div class="row gx-2">
+                                    <div class="col-3">
+                                        <img src="/images/profile.png" class="w-100" alt="singleminded">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="mb-0">Budi</h6>
+                                        <p class="mb-0" style="font-size:.8rem">5.500 pembelian</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">John Dodol</h5>
-                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
+                            <div class="list-group-item px-0 border-0">
+                                <div class="row gx-2">
+                                    <div class="col-3">
+                                        <img src="/images/profile.png" class="w-100" alt="singleminded">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="mb-0">Dika</h6>
+                                        <p class="mb-0" style="font-size:.8rem">5.000 pembelian</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 border-0">
+                                <div class="row gx-2">
+                                    <div class="col-3">
+                                        <img src="/images/profile.png" class="w-100" alt="singleminded">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="mb-0">Enggar</h6>
+                                        <p class="mb-0" style="font-size:.8rem">5.500 pembelian</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 border-0">
+                                <div class="row gx-2">
+                                    <div class="col-3">
+                                        <img src="/images/profile.png" class="w-100" alt="singleminded">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="mb-0">Fahri</h6>
+                                        <p class="mb-0" style="font-size:.8rem">5.000 pembelian</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -88,11 +125,17 @@
         <script>
             var options = {
                 series: [{
-                    name: 'series1',
+                    name: 'Rumahan',
                     data: [31, 40, 28, 51, 42, 109, 100]
                 }, {
-                    name: 'series2',
+                    name: 'Reseller',
                     data: [11, 32, 45, 32, 34, 52, 41]
+                }, {
+                    name: 'Agen',
+                    data: [1, 23, 45, 67, 9, 21, 32]
+                }, {
+                    name: 'Heureka',
+                    data: [34, 65, 23, 56, 87, 32, 76]
                 }],
                 chart: {
                     height: 350,
@@ -105,8 +148,7 @@
                     curve: 'smooth'
                 },
                 xaxis: {
-                    type: 'datetime',
-                    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
                 },
                 tooltip: {
                     x: {

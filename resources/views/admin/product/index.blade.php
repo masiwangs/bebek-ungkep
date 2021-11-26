@@ -21,8 +21,9 @@
                     <div class="row">
                         <div class="col-12 col-xl-12">
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-header d-flex justify-content-between">
                                     <h4>Daftar Produk</h4>
+                                    <a href="{{ route('admin.product.list') }}"><i class="bi bi-list"></i></a>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -68,25 +69,64 @@
                 <div class="col-12 col-lg-3">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Produk Teratas</h4>
+                            <h4>5 Produk Teratas</h4>
                         </div>
-                        <div class="card-content pb-4">
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Hank Schrader</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
+                        <div class="card-body pb-4">
+                            <div class="list-group">
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-2.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0" style="font-size:.8rem">5.000 penjualan</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Dean Winchester</h5>
-                                    <h6 class="text-muted mb-0">@imdean</h6>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-6.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0" style="font-size:.8rem">5.500 penjualan</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">John Dodol</h5>
-                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-2.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0" style="font-size:.8rem">5.000 penjualan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-6.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0" style="font-size:.8rem">5.500 penjualan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-2.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0" style="font-size:.8rem">5.000 penjualan</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

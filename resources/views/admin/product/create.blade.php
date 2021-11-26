@@ -193,7 +193,7 @@
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <button type="button" class="btn btn-light me-2">Batal</button>
-                                    <input type="submit" value="Simpan" class="btn btn-primary">
+                                    <input type="submit" value="Simpan" class="btn btn-warning text-dark">
                                 </div>
                             </form>
                         </div>

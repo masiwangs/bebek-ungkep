@@ -29,3 +29,9 @@ Route::view('/admin/transaksi-keuangan/baru', 'admin.transaction.new')->name('ad
 
 
 Route::view('/', 'client.index')->name('client.index');
+Route::view('/pesanan', 'client.order')->name('client.order');
+Route::view('/transaksi', 'client.transaction')->name('client.transaction');
+Route::view('/akun', 'client.profile')->name('client.profile');
+Route::view('/login', 'client.login')->name('client.login');
+Route::view('/register', 'client.register')->name('client.register');
+Route::view('/akun/keamanan', 'client.security')->name('client.security');

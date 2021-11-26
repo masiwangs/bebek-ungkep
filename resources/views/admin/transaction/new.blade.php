@@ -48,7 +48,7 @@
                                     <input type="text" name="" id="" class="form-control">
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <input type="submit" value="Cari" class="btn btn-primary">
+                                    <input type="submit" value="Cari" class="btn btn-warning text-dark">
                                 </div>
                             </form>
                         </div>

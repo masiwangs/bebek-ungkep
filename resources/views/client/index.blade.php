@@ -3,197 +3,247 @@
         <div class="page-content">
             <section class="row">
                 <div class="col-12 col-lg-9">
-                    <div class="row">
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon purple">
-                                                <i class="bi-cash-coin"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Total Penjualan</h6>
-                                            <h6 class="font-extrabold mb-0">Rp123jt</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/images/slides/banner1.png" class="d-block w-100" alt="...">
                             </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon blue">
-                                                <i class="bi-house-door"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Droppoint</h6>
-                                            <h6 class="font-extrabold mb-0">183.000</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="carousel-item">
+                                <img src="/images/slides/banner2.png" class="d-block w-100" alt="...">
                             </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon green">
-                                                <i class="bi-cart4"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Agen/Reseller</h6>
-                                            <h6 class="font-extrabold mb-0">80.000</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon red">
-                                                <i class="bi-person"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Pelanggan Aktif</h6>
-                                            <h6 class="font-extrabold mb-0">112</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="carousel-item">
+                                <img src="/images/slides/banner3.png" class="d-block w-100" alt="...">
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Grafik Penjualan</h4>
+                    
+                    <div class="mb-3">
+                        <h3 class="text-dark">Diskon Spesial!!</h3>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                                <div class="MultiCarousel-inner">
+                                    <div class="item">
+                                        <div class="card shadow-sm">
+                                            <div class="card-content">
+                                                <div style="position: relative;">
+                                                    <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                                    <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                                </div>
+                                                <p class="mb-0 p-1 text-white bg-danger" style="font-size: .8rem"><i class="bi bi-percent"></i> Gratis ongkir minimal 5pcs</p>
+                                                <div class="card-body p-3 pt-1">
+                                                    <div>
+                                                        <p class="mb-0">Bebek Ungkep</p>
+                                                        <p class="h5">Rp. 50.000,-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card shadow-sm">
+                                            <div class="card-content">
+                                                <div style="position: relative;">
+                                                    <img src="/images/products/produk-3.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                                    <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                                </div>
+                                                <p class="mb-0 p-1 text-white bg-danger" style="font-size: .8rem"><i class="bi bi-percent"></i> Gratis ongkir minimal 5pcs</p>
+                                                <div class="card-body p-3 pt-1">
+                                                    <div>
+                                                        <p class="mb-0">Bebek Ungkep</p>
+                                                        <p class="h5">Rp. 50.000,-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card shadow-sm">
+                                            <div class="card-content">
+                                                <div style="position: relative;">
+                                                    <img src="/images/products/produk-4.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                                    <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                                </div>
+                                                <p class="mb-0 p-1 text-white bg-danger" style="font-size: .8rem"><i class="bi bi-percent"></i> Gratis ongkir minimal 5pcs</p>
+                                                <div class="card-body p-3 pt-1">
+                                                    <div>
+                                                        <p class="mb-0">Bebek Ungkep</p>
+                                                        <p class="h5">Rp. 50.000,-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card shadow-sm">
+                                            <div class="card-content">
+                                                <div style="position: relative;">
+                                                    <img src="/images/products/produk-5.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                                    <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                                </div>
+                                                <p class="mb-0 p-1 text-white bg-danger" style="font-size: .8rem"><i class="bi bi-percent"></i> Gratis ongkir minimal 5pcs</p>
+                                                <div class="card-body p-3 pt-1">
+                                                    <div>
+                                                        <p class="mb-0">Bebek Ungkep</p>
+                                                        <p class="h5">Rp. 50.000,-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card shadow-sm">
+                                            <div class="card-content">
+                                                <div style="position: relative;">
+                                                    <img src="/images/products/produk-6.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                                    <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                                </div>
+                                                <div class="mb-0 p-1 text-white bg-danger" style="font-size: .7rem"><i class="bi bi-percent"></i> Gratis ongkir minimal 5pcs</div>
+                                                <div class="card-body p-3 pt-1">
+                                                    <div>
+                                                        <p class="mb-0">Bebek Ungkep</p>
+                                                        <p class="h5">Rp. 50.000,-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <div id="chart-profile-visit"></div>
-                                </div>
+                                <span role="button" class="p-0 leftLst"><i class="bi bi-arrow-left-circle-fill" style="font-size: 2rem"></i></span>
+                                <span role="button" class="p-0 rightLst"><i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem"></i></span>
                             </div>
                         </div>
                     </div>
+                    <div style="height: 3rem"></div>
+                    <div class="mb-4">
+                        <h3 class="h3">Semua Produk</h3>
+                    </div>
                     <div class="row">
-                        <div class="col-12 col-xl-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Tren Produk</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-primary" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">Europe</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">862</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-europe"></div>
-                                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-success" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">America</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">375</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-america"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-danger" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">Indonesia</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">1025</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-indonesia"></div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-8">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Pesanan Terakhir</h4>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-lg">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Comment</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/5.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Cantik</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Congratulations on your graduation!</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/2.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Ganteng</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Wow amazing design! Can you make
-                                                            another tutorial for
-                                                            this design?</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep xxx</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-content">
+                                    <div style="position: relative;">
+                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
+                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <div>
+                                            <p class="mb-0">Bebek Ungkep</p>
+                                            <p class="h5">Rp. 50.000,-</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -202,61 +252,105 @@
                 </div>
                 <div class="col-12 col-lg-3">
                     <div class="card">
-                        <div class="card-body py-4 px-5">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar avatar-xl">
-                                    <img src="assets/images/faces/1.jpg" alt="Face 1">
-                                </div>
-                                <div class="ms-3 name">
-                                    <h5 class="font-bold">John Duck</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
                         <div class="card-header">
-                            <h4>Notifikasi Terbaru</h4>
-                        </div>
-                        <div class="card-content pb-4">
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/4.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Hank Schrader</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/5.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Dean Winchester</h5>
-                                    <h6 class="text-muted mb-0">@imdean</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/1.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">John Dodol</h5>
-                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                </div>
-                            </div>
-                            <div class="px-4">
-                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua notifikasi</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Komposisi Pelanggan</h4>
+                            <h4 class="h3">Keranjang Anda</h4>
                         </div>
                         <div class="card-body">
-                            <div id="chart-visitors-profile"></div>
+                            <div class="list-group">
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-2.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0"  style="font-size:.8rem">Rp50.000,-</p>
+                                            <div class="d-flex flex-row">
+                                                <i class="bi bi-dash-circle-fill me-2"></i>
+                                                <p class="font-bold">5</p>
+                                                <i class="bi bi-plus-circle-fill ms-2"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-1">
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <img src="/images/products/produk-6.jpg" class="w-100" alt="singleminded">
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">Bebek ungkep</h6>
+                                            <p class="mb-0"  style="font-size:.8rem">Rp50.000,-</p>
+                                            <div class="d-flex flex-row">
+                                                <i class="bi bi-dash-circle-fill me-2"></i>
+                                                <p class="font-bold">5</p>
+                                                <i class="bi bi-plus-circle-fill ms-2"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-1">
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-block btn-danger">Pesan sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <h4>Pesanan Anda</h4>
+                            <a href="#"><i class="bi bi-list"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group">
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <div class="avatar avatar-lg bg-danger me-3">
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)"><i class="bi bi-cash-coin" style="font-size:1.5rem"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">INV202116250004</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp50.000,-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Menunggu pembayaran</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <div class="avatar avatar-lg bg-warning me-3">
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)"><i class="bi bi-box-seam" style="font-size:1.5rem"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">INV202116250005</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp50.000,-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Sedang dikemas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 border-0">
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <div class="avatar avatar-lg bg-primary me-3">
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)"><i class="bi bi-truck" style="font-size:1.5rem"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">INV202116250006</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp50.000,-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Dalam perjalanan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -83,116 +83,71 @@
                                     <h4>Grafik Penjualan</h4>
                                 </div>
                                 <div class="card-body">
-                                    <div id="chart-profile-visit"></div>
+                                    <div id="chart-penjualan"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-xl-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Tren Produk</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-primary" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">Europe</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">862</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-europe"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-success" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">America</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">375</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-america"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-danger" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">Indonesia</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">1025</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-indonesia"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-xl-8">
+                        <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h4>Pesanan Terakhir</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-lg">
+                                        <table class="table" style="font-size:.8rem">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Comment</th>
+                                                    <th>Waktu</th>
+                                                    <th>Invoice</th>
+                                                    <th>Produk</th>
+                                                    <th>Jumlah Tagihan</th>
+                                                    <th>Alamat Pengiriman</th>
+                                                    <th>Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/5.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Cantik</p>
-                                                        </div>
+                                                    <td>2021-11-21 11:47:08</td>
+                                                    <td class="font-semibold">
+                                                        <a href="">INV2021112109876</a>
                                                     </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Congratulations on your graduation!</p>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Bebek ungkep (5pcs)</li>
+                                                            <li>Bebek ungkep box (5pcs)</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        Rp150.000,-
+                                                    </td>
+                                                    <td>
+                                                        Jl. Tempong No. 91, Semarang
+                                                    </td>
+                                                    <td>
+                                                        Sedang dikemas
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/2.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Ganteng</p>
-                                                        </div>
+                                                    <td>2021-11-21 11:47:08</td>
+                                                    <td class="font-semibold">
+                                                        <a href="">INV2021112109872</a>
                                                     </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Wow amazing design! Can you make
-                                                            another tutorial for
-                                                            this design?</p>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Bebek ungkep (5pcs)</li>
+                                                            <li>Bebek ungkep box (3pcs)</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        Rp120.000,-
+                                                    </td>
+                                                    <td>
+                                                        Jl. Tempong No. 91, Semarang
+                                                    </td>
+                                                    <td>
+                                                        Dalam perjalanan
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -208,62 +163,142 @@
                         <div class="card-body py-4 px-5">
                             <div class="d-flex align-items-center">
                                 <div class="avatar avatar-xl">
-                                    <img src="assets/images/faces/1.jpg" alt="Face 1">
+                                    <img src="/images/profile.png" alt="Face 1">
                                 </div>
                                 <div class="ms-3 name">
-                                    <h5 class="font-bold">John Duck</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
+                                    <h5 class="font-bold">Halo</h5>
+                                    <h6 class="text-muted mb-0">Admin</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h4>Notifikasi Terbaru</h4>
-                        </div>
-                        <div class="card-content pb-4">
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/4.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Hank Schrader</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/5.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Dean Winchester</h5>
-                                    <h6 class="text-muted mb-0">@imdean</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/1.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">John Dodol</h5>
-                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                </div>
-                            </div>
-                            <div class="px-4">
-                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua notifikasi</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Komposisi Pelanggan</h4>
+                            <h4>Komposisi Penjualan</h4>
                         </div>
                         <div class="card-body">
-                            <div id="chart-visitors-profile"></div>
+                            <div id="chart-komposisi-penjualan"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <h4>Transaksi Terbaru</h4>
+                            <a href="{{ route('admin.transaction.new') }}">
+                                <i class="bi bi-list"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Invoice</th>
+                                        <th>Jumlah Bayar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="fw-bold mb-0">INV2021112001291</p>
+                                        </td>
+                                        <td>Rp.140.000,-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="fw-bold mb-0">INV2021112001212</p>
+                                        </td>
+                                        <td>Rp.240.000,-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="fw-bold mb-0">INV2021112001321</p>
+                                        </td>
+                                        <td>Rp.40.000,-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
+
+    <x-slot name="script">
+        <script>
+            var options = {
+                series: [{
+                    name: 'Penjualan',
+                    data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                xaxis: {
+                    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                },
+                colors:['#ffc107'],
+                yaxis: {
+                    title: {
+                        text: '$ (thousands)'
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function(val) {
+                            return val + " pcs"
+                        }
+                    }
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart-penjualan"), options);
+            chart.render();
+        </script>
+        <script>
+            var options = {
+                series: [44, 55, 13, 43, 22],
+                chart: {
+                    width: 260,
+                    type: 'pie',
+                },
+                labels: ['Produk A', 'Produk B', 'Produk C', 'Produk D', 'Produk E'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                legend: {
+                    show: false
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart-komposisi-penjualan"), options);
+            chart.render();
+        </script>
+    </x-slot>
 </x-admin-layout>

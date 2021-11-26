@@ -64,28 +64,35 @@
                         <div class="card-header">
                             <h4>Transaksi Terbaru</h4>
                         </div>
-                        <div class="card-content pb-4">
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Hank Schrader</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Dean Winchester</h5>
-                                    <h6 class="text-muted mb-0">@imdean</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">John Dodol</h5>
-                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                </div>
-                            </div>
-                            <div class="px-4">
-                                <button class='btn btn-block btn-light-primary font-bold mt-3'>Lihat semua</button>
-                            </div>
+                        <div class="card-body pb-4">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Invoice</th>
+                                        <th>Jumlah Bayar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="fw-bold mb-0">INV2021112001291</p>
+                                        </td>
+                                        <td>Rp.140.000,-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="fw-bold mb-0">INV2021112001212</p>
+                                        </td>
+                                        <td>Rp.240.000,-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="fw-bold mb-0">INV2021112001321</p>
+                                        </td>
+                                        <td>Rp.40.000,-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -119,6 +126,8 @@
                     width: 2,
                     colors: ['transparent']
                 },
+                colors:['#ffc107'],
+
                 xaxis: {
                     categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
                 },
