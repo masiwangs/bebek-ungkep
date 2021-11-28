@@ -16,7 +16,7 @@
                     <div class="mb-3">
                         <label for="" class="form-label">Bukti transfer:</label>
                         <input type="file" wire:model="payment_proof" class="form-control">
-                        @error('payment_proof') <span class="error">{{ $message }}</span> @enderror
+                        @error('payment_proof') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
                     <div class="">
                         <button class="btn btn-block btn-danger">Selesai</button>

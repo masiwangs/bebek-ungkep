@@ -31,7 +31,7 @@ class PaymentForm extends Component
 
     public function submit() {
         $this->validate([
-            'payment_proof' => 'image|max:2048'
+            'payment_proof' => 'max:2048'
         ]);
 
         $code = Str::upper(Str::random(6));

@@ -18,7 +18,7 @@
                     </div>
                     
                     <div class="mb-3">
-                        <h3 class="text-dark">Diskon Spesial!!</h3>
+                        <h3 class="h3 text-dark">Diskon Spesial!!</h3>
                     </div>
                     {{-- <div class="container">
                         <div class="row">
@@ -137,48 +137,71 @@
                         </div>
                         <div class="card-body">
                             <div class="list-group">
+                                @foreach ($baskets as $basket)
                                 <div class="list-group-item px-0 border-0">
+                                    @if($basket->is_done)
                                     <div class="row gx-2">
                                         <div class="col-3">
-                                            <div class="avatar avatar-lg bg-danger me-3">
-                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)"><i class="bi bi-cash-coin" style="font-size:1.5rem"></i></span>
+                                            <div class="avatar avatar-lg bg-success me-3">
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)">
+                                                    <i class="bi bi-check-all" style="font-size:1.5rem"></i>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="col-8">
-                                            <h6 class="mb-0">INV202116250004</h6>
-                                            <p class="mb-0" style="font-size:.8rem">Rp50.000,-</p>
-                                            <p class="mb-0" style="font-size: .8rem">Menunggu pembayaran</p>
+                                            <h6 class="mb-0">{{ $basket->invoice->id }}</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp{{ number_format($basket->invoice->product_bill + $basket->invoice->shipment_bill) }},-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Selesai</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="list-group-item px-0 border-0">
-                                    <div class="row gx-2">
-                                        <div class="col-3">
-                                            <div class="avatar avatar-lg bg-warning me-3">
-                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)"><i class="bi bi-box-seam" style="font-size:1.5rem"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <h6 class="mb-0">INV202116250005</h6>
-                                            <p class="mb-0" style="font-size:.8rem">Rp50.000,-</p>
-                                            <p class="mb-0" style="font-size: .8rem">Sedang dikemas</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item px-0 border-0">
+                                    @elseif($basket->is_sent)
                                     <div class="row gx-2">
                                         <div class="col-3">
                                             <div class="avatar avatar-lg bg-primary me-3">
-                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)"><i class="bi bi-truck" style="font-size:1.5rem"></i></span>
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)">
+                                                    <i class="bi bi-truck" style="font-size:1.5rem"></i>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="col-8">
-                                            <h6 class="mb-0">INV202116250006</h6>
-                                            <p class="mb-0" style="font-size:.8rem">Rp50.000,-</p>
-                                            <p class="mb-0" style="font-size: .8rem">Dalam perjalanan</p>
+                                            <h6 class="mb-0">{{ $basket->invoice->id }}</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp{{ number_format($basket->invoice->product_bill + $basket->invoice->shipment_bill) }},-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Sedang dikirim</p>
                                         </div>
                                     </div>
+                                    @elseif($basket->is_paid)
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <div class="avatar avatar-lg bg-warning me-3">
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)">
+                                                    <i class="bi bi-box-seam" style="font-size:1.5rem"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">{{ $basket->invoice->id }}</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp{{ number_format($basket->invoice->product_bill + $basket->invoice->shipment_bill) }},-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Sedang dikemas</p>
+                                        </div>
+                                    </div>
+                                    @else
+                                    <div class="row gx-2">
+                                        <div class="col-3">
+                                            <div class="avatar avatar-lg bg-danger me-3">
+                                                <span class="avatar-content" style="transform:translate(-.25rem,-.5rem)">
+                                                    <i class="bi bi-cash-coin" style="font-size:1.5rem"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <h6 class="mb-0">{{ $basket->invoice->id }}</h6>
+                                            <p class="mb-0" style="font-size:.8rem">Rp{{ number_format($basket->invoice->product_bill + $basket->invoice->shipment_bill) }},-</p>
+                                            <p class="mb-0" style="font-size: .8rem">Menunggu pembayaran</p>
+                                        </div>
+                                    </div>
+                                    @endif
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
