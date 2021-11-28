@@ -16,4 +16,8 @@ class Payment extends Model
         'payment_proof',
         'is_confirmed'
     ];
+
+    public function invoice() {
+        return $this->belongsTo(Invoice::class, 'invoice_id');
+    }
 }

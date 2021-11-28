@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'role_id'
     ];
 
     /**
@@ -44,6 +46,14 @@ class User extends Authenticatable
 
     public function baskets() {
         return $this->hasMany(Basket::class, 'user_id');
+    }
+
+    public function roles() {
+        return $this->hasMany(UserRole::class, 'user_id');
+    }
+
+    public function active_role() {
+        return $this->belongsTo(Role::class, 'role_id');
     }
 
     public function getActiveBasketAttribute() {

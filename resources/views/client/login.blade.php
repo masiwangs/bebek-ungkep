@@ -8,14 +8,15 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <form action="">
+                            <form method="POST">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="" class="form-label">Email</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="text" name="email" id="" class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="password" name="password" id="" class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <a href="#" class="text-secondary"><i class="bi bi-question-circle-fill"></i> Lupa password</a>

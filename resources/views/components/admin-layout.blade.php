@@ -64,7 +64,7 @@
                                                 <a href="{{ route('admin.product.index') }}" class='submenu-link text-dark'>Overview</a>
                                             </li>
                                             <li class="submenu-item  ">
-                                                <a href="{{ route('admin.product.list') }}" class='submenu-link text-dark'>Daftar Pesanan</a>
+                                                <a href="{{ route('admin.order.list') }}" class='submenu-link text-dark'>Daftar Pesanan</a>
                                             </li>
                                             <li class="submenu-item  ">
                                                 <a href="{{ route('admin.product.create') }}" class='submenu-link text-dark'>Pesanan Baru</a>

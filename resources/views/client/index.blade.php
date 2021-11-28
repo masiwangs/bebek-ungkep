@@ -123,13 +123,13 @@
                         @php $role = 'regular'; @endphp
                         @foreach ($products as $product)
                             @if($role == 'regular' and $product->regular_price > 0)
-                                @livewire('product-card', ['product' => $product, 'role' => $role], key($product->id))
+                                <livewire:product-card :product="$product" :role="$role" :key="$product->id"/>
                             @endif
                         @endforeach
                     </div>
                 </div>
                 <div class="col-12 col-lg-3">
-                    @livewire('client-basket')
+                    <livewire:client-basket/>
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
                             <h4>Pesanan Anda</h4>

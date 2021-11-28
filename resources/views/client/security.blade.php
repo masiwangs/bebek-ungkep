@@ -2,19 +2,23 @@
     <div class="content-wrapper container">
         <div class="page-content">
             <div class="page-heading">
-                <h3>Keamanan Akun</h3>
+                <h3 class="h3 text-dark">Keamanan Akun</h3>
             </div>
             <section class="row">
                 <div class="col-12 col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <form action="">
+                            <form method="POST">
+                                @csrf
                                 <div class="row mb-3">
                                     <div class="col-4 col-lg-2 d-lg-flex justify-content-end">
                                         <label for="" class="form-label">Password Baru</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
-                                        <input type="text" name="" id="" class="form-control">
+                                        <input type="password" name="password" required id="" class="form-control">
+                                        @error('password')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -22,11 +26,14 @@
                                         <label for="" class="form-label">Konfirmasi</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
-                                        <input type="text" name="" id="" class="form-control">
+                                        <input type="password" name="password_confirm" required id="" class="form-control">
+                                        @error('password_confirm')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <button class="btn btn-danger">Simpan</button>
+                                    <input type="submit" value="Perbarui" class="btn btn-danger">
                                 </div>
                             </form>
                         </div>

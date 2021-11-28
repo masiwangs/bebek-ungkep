@@ -23,9 +23,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($payments as $payment)
                                         <tr>
-                                            <td>TRF123</td>
-                                            <td>INV123</td>
+                                            <td>{{ $payment->code }}</td>
+                                            <td>{{ $payment->invoice->id }}</td>
                                             <td>Maulana Ichwan A</td>
                                             <td>Rumahan</td>
                                             <td>19 Juni 2022 - 19:20:22</td>
@@ -33,6 +34,7 @@
                                             <td>Rp150.000</td>
                                             <td>Terkonfirmasi</td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

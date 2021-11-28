@@ -3,6 +3,7 @@
         <h4 class="h3">Keranjang Anda</h4>
     </div>
     <div class="card-body">
+        @if(auth()->check())
         <div class="list-group">
             @if(count($active_basket->products) > 0)
                 @foreach ($active_basket->products as $product)    
@@ -41,5 +42,8 @@
         <div>
             <button class="btn btn-block btn-danger" wire:click="checkout">Pesan sekarang</button>
         </div>
+        @else
+        <div>Silahkan <a href="{{ route('client.login') }}">login</a> terlebih dahulu.</div>
+        @endif
     </div>
 </div>

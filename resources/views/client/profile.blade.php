@@ -2,23 +2,23 @@
     <div class="content-wrapper container">
         <div class="page-content">
             <div class="page-heading">
-                <h3>Profil Akun</h3>
+                <h3 class="h3 text-dark">Profil Akun</h3>
             </div>
             <section class="row">
                 <div class="col-12 col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <form action="">
+                            <form method="POST">
+                                @csrf
                                 <div class="row mb-3">
                                     <div class="col-4 col-lg-2 d-lg-flex justify-content-end">
                                         <label for="" class="form-label">Login sebagai</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
                                         <select class="form-select" aria-label="Default select example">
-                                            <option value="1">Pelanggan</option>
-                                            <option value="2">Reseller</option>
-                                            <option value="3">Agen</option>
-                                            <option value="3">Heureka/Industri</option>
+                                            @foreach (auth()->user()->roles as $user_role)
+                                            <option value="{{ $user_role->role_id }}">{{ \Str::title($user_role->role->name) }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -27,7 +27,10 @@
                                         <label for="" class="form-label">Nama Anda</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
-                                        <input type="text" name="" id="" class="form-control">
+                                        <input type="text" name="name" value="{{ auth()->user()->name }}" id="" class="form-control">
+                                        @error('name')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -35,7 +38,10 @@
                                         <label for="" class="form-label">Email</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
-                                        <input type="text" name="" id="" class="form-control">
+                                        <input type="email" readonly value="{{ auth()->user()->email }}" class="form-control">
+                                        @error('email')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -43,16 +49,22 @@
                                         <label for="" class="form-label">No HP</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
-                                        <input type="text" name="" id="" class="form-control">
+                                        <input type="text" name="phone" value="{{ auth()->user()->phone }}" class="form-control">
+                                        @error('phone')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
-                                <div class="row mb-3">
+                                {{-- <div class="row mb-3">
                                     <div class="col-4 col-lg-2 d-lg-flex justify-content-end">
                                         <label for="" class="form-label">Jenis Kelamin</label>
                                     </div>
                                     <div class="col-8 col-lg-10">
                                         <input type="text" name="" id="" class="form-control">
                                     </div>
+                                </div> --}}
+                                <div class="d-flex justify-content-end">
+                                    <input type="submit" value="Perbarui" class="btn btn-danger">
                                 </div>
                             </form>
                         </div>

@@ -53,6 +53,7 @@
         z-index: -1;
         }
     </style>
+    @notifyCss
     @livewireStyles
 </head>
 
@@ -134,6 +135,7 @@
                                 </a>
                             </li>
                             
+                            @if(auth()->check())
                             <li class="menu-item ms-auto has-sub">
                                 <a href="#" class='menu-link '>
                                     <i class="bi bi-person-fill"></i>
@@ -146,12 +148,24 @@
                                                 <a href="{{ route('client.profile') }}" class='submenu-link'>Akun Anda</a>
                                             </li>
                                             <li class="submenu-item  ">
-                                                <a href="{{ route('client.login') }}" class='submenu-link'>Logout</a>
+                                                <a href="{{ route('client.logout') }}" class='submenu-link'>Logout</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
+                            @else
+                            <li class="menu-item ms-auto">
+                                <a href="{{ route('client.login') }}" class='menu-link '>
+                                    <span>Login</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('client.register') }}" class='menu-link '>
+                                    <span>Register</span>
+                                </a>
+                            </li>
+                            @endif
                             <li class="menu-item">
                                 <a href="#" class='menu-link '>
                                     <span><i class="bi bi-question-circle-fill"></i></span>
@@ -181,6 +195,8 @@
         </div>
     </div>
     @livewireScripts
+    <x:notify-messages />
+    @notifyJs
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
