@@ -15,54 +15,62 @@
                                             <th>Waktu</th>
                                             <th>Invoice</th>
                                             <th>Produk</th>
-                                            <th>Jumlah Tagihan</th>
+                                            <th class="text-nowrap">Jumlah Tagihan</th>
                                             <th>Alamat Pengiriman</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($baskets as $basket)
                                         <tr>
-                                            <td>{{ Date::now() }}</td>
+                                            <td class="text-nowrap">{{ date('d m y H:i:s', strtotime($basket->checked_out_at)) }}</td>
                                             <td class="font-semibold">
-                                                <a href="">INV2021112109876</a>
+                                                <a href="">{{ $basket->invoice->id }}</a>
                                             </td>
                                             <td>
                                                 <ul>
-                                                    <li>Bebek ungkep (5pcs)</li>
-                                                    <li>Bebek ungkep box (5pcs)</li>
+                                                    @foreach ($basket->products as $basket_product)
+                                                    <li>{{ $basket_product->product_name }} ({{ $basket_product->product_qty }}pcs)</li>
+                                                    @endforeach
                                                 </ul>
                                             </td>
+                                            @if($basket->invoice)
+                                            @if($basket->invoice->payment)
                                             <td>
-                                                Rp150.000,-
+                                                Rp{{ number_format($basket->invoice->payment->bill, 0, ',', '.') }},-
+                                            </td>
+                                            @else
+                                            <td class="text-danger">
+                                                <a href="{{ route('client.payment') }}">Selesaikan pembayaran</a>
+                                            </td>
+                                            @endif
+                                            <td>
+                                                {{ \Str::title(implode(', ', [
+                                                    $basket->invoice->shipment_road,
+                                                    $basket->invoice->shipment_village,
+                                                    $basket->invoice->shipment_subdistrict,
+                                                    $basket->invoice->shipment_city,
+                                                    $basket->invoice->shipment_province
+
+                                                ])) }}
                                             </td>
                                             <td>
-                                                Jl. Tempong No. 91, Semarang
+                                                {{ 
+                                                    $basket->is_done
+                                                        ? 'Selesai'
+                                                        : $basket->is_sent
+                                                            ? 'Sedang dikirim'
+                                                            : $basket->is_paid
+                                                                ? 'Sedang dikemas'
+                                                                : 'Menunggu pembayaran'
+                                                        
+                                                }}
                                             </td>
-                                            <td>
-                                                Sedang dikemas
-                                            </td>
+                                            @else
+                                            <td colspan="3">Harap selesaikan pesanan Anda</td>
+                                            @endif
                                         </tr>
-                                        <tr>
-                                            <td>{{ Date::now() }}</td>
-                                            <td class="font-semibold">
-                                                <a href="">INV2021112109872</a>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li>Bebek ungkep (5pcs)</li>
-                                                    <li>Bebek ungkep box (3pcs)</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp120.000,-
-                                            </td>
-                                            <td>
-                                                Jl. Tempong No. 91, Semarang
-                                            </td>
-                                            <td>
-                                                Dalam perjalanan
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

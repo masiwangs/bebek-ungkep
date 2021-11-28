@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Horizontal - Mazer Admin Dashboard</title>
+    <title>{{ $title ?? 'Admin Area' }} - Admin Bebek Ungkep Yuk Sri</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -20,8 +20,11 @@
     <style>
         html, body {
             font-family: 'Zen Kaku Gothic Antique', sans-serif;
+            font-size: .9rem!important
         }
     </style>
+    @notifyCss
+    @livewireStyles
 </head>
 
 <body>
@@ -48,6 +51,27 @@
                                     <i class="bi bi-grid-fill"></i>
                                     <span>Dashboard</span>
                                 </a>
+                            </li>
+                            <li class="menu-item has-sub">
+                                <a href="#" class='menu-link text-dark'>
+                                    <i class="bi bi-cart4"></i>
+                                    <span>Pesanan</span>
+                                </a>
+                                <div class="submenu">
+                                    <div class="submenu-group-wrapper">
+                                        <ul class="submenu-group">
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.product.index') }}" class='submenu-link text-dark'>Overview</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.product.list') }}" class='submenu-link text-dark'>Daftar Pesanan</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.product.create') }}" class='submenu-link text-dark'>Pesanan Baru</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                             <li class="menu-item has-sub">
                                 <a href="#" class='menu-link text-dark'>
@@ -153,6 +177,9 @@
             </footer>
         </div>
     </div>
+    @livewireScripts
+    <x:notify-messages />
+    @notifyJs
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>

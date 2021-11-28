@@ -20,7 +20,7 @@
                     <div class="mb-3">
                         <h3 class="text-dark">Diskon Spesial!!</h3>
                     </div>
-                    <div class="container">
+                    {{-- <div class="container">
                         <div class="row">
                             <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel"  data-interval="1000">
                                 <div class="MultiCarousel-inner">
@@ -114,193 +114,22 @@
                                 <span role="button" class="p-0 rightLst"><i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem"></i></span>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div style="height: 3rem"></div>
                     <div class="mb-4">
-                        <h3 class="h3">Semua Produk</h3>
+                        <h3 class="h3 text-dark">Semua Produk</h3>
                     </div>
                     <div class="row">
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep xxx</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="card shadow-sm">
-                                <div class="card-content">
-                                    <div style="position: relative;">
-                                        <img src="/images/products/produk-2.jpg" class="card-img-top img-fluid" alt="singleminded">
-                                        <button class="btn btn-warning font-semibold p-1" style="position: absolute; top: .5rem; right: .5rem; font-size: .8rem;">+ Ke keranjang</button>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div>
-                                            <p class="mb-0">Bebek Ungkep</p>
-                                            <p class="h5">Rp. 50.000,-</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @php $role = 'regular'; @endphp
+                        @foreach ($products as $product)
+                            @if($role == 'regular' and $product->regular_price > 0)
+                                @livewire('product-card', ['product' => $product, 'role' => $role], key($product->id))
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="h3">Keranjang Anda</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="list-group">
-                                <div class="list-group-item px-0 border-0">
-                                    <div class="row gx-2">
-                                        <div class="col-3">
-                                            <img src="/images/products/produk-2.jpg" class="w-100" alt="singleminded">
-                                        </div>
-                                        <div class="col-8">
-                                            <h6 class="mb-0">Bebek ungkep</h6>
-                                            <p class="mb-0"  style="font-size:.8rem">Rp50.000,-</p>
-                                            <div class="d-flex flex-row">
-                                                <i class="bi bi-dash-circle-fill me-2"></i>
-                                                <p class="font-bold">5</p>
-                                                <i class="bi bi-plus-circle-fill ms-2"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-1">
-                                            <i class="bi bi-trash text-danger"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item px-0 border-0">
-                                    <div class="row gx-2">
-                                        <div class="col-3">
-                                            <img src="/images/products/produk-6.jpg" class="w-100" alt="singleminded">
-                                        </div>
-                                        <div class="col-8">
-                                            <h6 class="mb-0">Bebek ungkep</h6>
-                                            <p class="mb-0"  style="font-size:.8rem">Rp50.000,-</p>
-                                            <div class="d-flex flex-row">
-                                                <i class="bi bi-dash-circle-fill me-2"></i>
-                                                <p class="font-bold">5</p>
-                                                <i class="bi bi-plus-circle-fill ms-2"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-1">
-                                            <i class="bi bi-trash text-danger"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <button class="btn btn-block btn-danger">Pesan sekarang</button>
-                            </div>
-                        </div>
-                    </div>
+                    @livewire('client-basket')
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
                             <h4>Pesanan Anda</h4>

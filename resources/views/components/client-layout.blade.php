@@ -20,6 +20,7 @@
     <style>
         html, body {
             font-family: 'Zen Kaku Gothic Antique', sans-serif;
+            font-size: .9rem!important
         }
         .bg-danger { 
             background-color: #dd1a32
@@ -52,6 +53,7 @@
         z-index: -1;
         }
     </style>
+    @livewireStyles
 </head>
 
 <body>
@@ -61,7 +63,7 @@
                 <div class="header-top" style="background-color: #cf182d">
                     <div class="container">
                         <div class="logo">
-                            <a href="index.html" class="fs-4 fw-bold text-light">
+                            <a href="{{ route('client.index') }}" class="fs-4 fw-bold text-light">
                                 <img src="/images/logo/logo.png" style="height: 2.5rem" srcset="">
                             </a>
                         </div>
@@ -178,6 +180,8 @@
             </footer>
         </div>
     </div>
+    @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/assets/vendors/apexcharts/apexcharts.js"></script>

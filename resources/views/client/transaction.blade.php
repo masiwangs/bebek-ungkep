@@ -20,38 +20,29 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($baskets as $basket)    
                                         <tr>
                                             <td class="font-semibold">
-                                                <a href="">INV2021112109876</a>
+                                                <a href="">{{ $basket->invoice->id }}</a>
                                             </td>
                                             <td>
-                                                Rp150.000,-
+                                                Rp{{ $basket->invoice->product_bill + $basket->invoice->shipment_bill }},-
                                             </td>
                                             <td>
-                                                -
+                                                {{ $basket->invoice->payment ? $basket->invoice->payment->pay_with : '-' }}
                                             </td>
                                             <td>
-                                                -
+                                                {{ $basket->is_paid == 1 ? $basket->paid_at : '-' }}
                                             </td>
                                             <td>
-                                                Belum dibayar
+                                                {{ 
+                                                    $basket->is_paid
+                                                        ? 'Sudah dibayar'
+                                                        : 'Belum dibayar'
+                                                }}
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="font-semibold">
-                                                <a href="">INV2021112109872</a>
-                                            </td>
-                                            <td>
-                                                Rp120.000,-
-                                            </td>
-                                            <td>
-                                                BRI 484893247832
-                                            </td>
-                                            <td>
-                                                {{ Date::now() }}
-                                            </td>
-                                            <td>Selesai</td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

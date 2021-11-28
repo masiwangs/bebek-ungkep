@@ -9,37 +9,51 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-hover table-lg" style="font-size:.8rem">
+                                <table class="table table-hover table-lg" style="font-size:.7rem">
                                     <thead>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Tersedia untuk</th>
-                                            <th>Harga</th>
-                                            <th>Min. Pesan</th>
-                                            <th>Diskon</th>
-                                            <th>Ongkos Kirim</th>
-                                            <th>Ongkos Pengemasan</th>
+                                            <th class="text-nowrap">Nama</th>
+                                            <th class="text-nowrap">Harga Reguler</th>
+                                            <th class="text-nowrap">Min. Pesan Reguler</th>
+                                            <th class="text-nowrap">Harga Reseller</th>
+                                            <th class="text-nowrap">Min. Pesan Reseller</th>
+                                            <th class="text-nowrap">Harga Agen</th>
+                                            <th class="text-nowrap">Min. Pesan Agen</th>
+                                            <th class="text-nowrap">Harga Industri</th>
+                                            <th class="text-nowrap">Min. Pesan Industri</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($products as $product)
                                         <tr>
-                                            <td>Dada Ungkep</td>
-                                            <td>Agen, Reseller, Industri</td>
-                                            <td>Rp60.000</td>
-                                            <td>5pcs</td>
                                             <td>
-                                                <p class="mb-0">5%</p>
-                                                <small>Minimal 50pcs untuk dapat diskon</small>
+                                                <div class="dropdown">
+                                                    <span class="dropdown-toggle text-decoration-underline text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      {{ $product->name }}
+                                                    </span>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="font-size:.8rem">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li>
+                                                            <form action="{{ route('admin.product.delete', ['product' => $product->id]) }}" method="POST">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <input type="submit" class="dropdown-item text-danger" value="Hapus">
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <span>{{ $product->description }}</span>
                                             </td>
-                                            <td>
-                                                <p class="mb-0">Rp10.000</p>
-                                                <small>Minimal 10pcs untuk gratis ongkir</small>
-                                            </td>
-                                            <td>
-                                                <p class="mb-0">Rp10.000</p>
-                                                <small>Minimal 10pcs untuk gratis pengemasan</small>
-                                            </td>
+                                            <td>{{ $product->regular_price > 0 ? 'Rp'.number_format($product->regular_price, 2, ',', '.') : '-' }}</td>
+                                            <td>{{ $product->regular_min_order > 0 ? $product->regular_min_order.' pcs' : '-' }}</td>
+                                            <td>{{ $product->reseller_price > 0 ? 'Rp'.number_format($product->reseller_price, 2, ',', '.') : '-' }}</td>
+                                            <td>{{ $product->reseller_min_order > 0 ? $product->reseller_min_order.' pcs' : '-' }}</td>
+                                            <td>{{ $product->agent_price > 0 ? 'Rp'.number_format($product->agent_price, 2, ',', '.') : '-' }}</td>
+                                            <td>{{ $product->agent_min_order > 0 ? $product->agent_min_order.' pcs' : '-' }}</td>
+                                            <td>{{ $product->industrial_price > 0 ? 'Rp'.number_format($product->industrial_price, 2, ',', '.') : '-' }}</td>
+                                            <td>{{ $product->industrial_min_order > 0 ? $product->industrial_min_order.' pcs' : '-' }}</td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

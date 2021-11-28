@@ -8,21 +8,22 @@
                 <div class="col-12 col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <form action="">
+                            <form method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="" class="form-label">Foto Produk</label>
-                                    <input type="file" name="" id="" class="form-control">
+                                    <input type="file" name="photo" id="" class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Nama produk</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="text" name="name" id="" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="" class="form-label">Deskripsi produk</label>
-                                    <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="description" id="" cols="30" rows="3" class="form-control"></textarea>
                                 </div>
                                 <div class="row mb-4">
-                                    <div class="col-12 col-lg-4 mb-3">
+                                    <div class="col-12 col-lg-3 mb-3">
                                         <div class="mb-3">
                                             <input class="form-check-input" name="is-pelanggan-rumahan" type="checkbox" value="" id="check-pelanggan-rumahan">
                                             <label class="form-check-label" for="check-pelanggan-rumahan">
@@ -32,65 +33,33 @@
                                         <div id="form-pelanggan-rumahan" style="display: none">
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Harga</label>
-                                                <input type="number" name="" id="" class="form-control">
+                                                <input type="number" name="regular_price" id="" class="form-control">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Minimal Pembelian</label>
-                                                <input type="number" name="" id="" value="0" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Diskon</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Beli untuk Dapat Diskon</label>
-                                                <input type="number" name="" id="" value="999" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Ongkos Kirim</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Beli untuk Gratis Ongkos Kirim</label>
-                                                <input type="number" name="" value="999" id="" class="form-control">
+                                                <input type="number" name="regular_min_order" id="" value="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-4 mb-3">
+                                    <div class="col-12 col-lg-3 mb-3">
                                         <div class="mb-3">
-                                            <input class="form-check-input" name="is-pelanggan-reseller" type="checkbox" value="" id="check-pelanggan-reseller">
+                                            <input class="form-check-input" name="is-pelanggan-reseller" type="checkbox" value="" id="check-pelanggan-rumahan">
                                             <label class="form-check-label" for="check-pelanggan-reseller">
-                                              Tersedia untuk pelanggan Reseller
+                                              Tersedia untuk reseller
                                             </label>
                                         </div>
                                         <div id="form-pelanggan-reseller" style="display: none">
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Harga</label>
-                                                <input type="number" name="" id="" class="form-control">
+                                                <input type="number" name="reseller_price" id="" class="form-control">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Minimal Pembelian</label>
-                                                <input type="number" name="" id="" value="0" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Diskon</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Beli untuk Dapat Diskon</label>
-                                                <input type="number" name="" id="" value="999" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Ongkos Kirim</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Beli untuk Gratis Ongkos Kirim</label>
-                                                <input type="number" name="" value="999" id="" class="form-control">
+                                                <input type="number" name="reseller_min_order" id="" value="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-4 mb-3">
+                                    <div class="col-12 col-lg-3 mb-3">
                                         <div class="mb-3">
                                             <input class="form-check-input" name="is-pelanggan-agen" type="checkbox" value="" id="check-pelanggan-agen">
                                             <label class="form-check-label" for="check-pelanggan-agen">
@@ -100,31 +69,15 @@
                                         <div id="form-pelanggan-agen" style="display: none">
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Harga</label>
-                                                <input type="number" name="" id="" class="form-control">
+                                                <input type="number" name="agent_price" id="" class="form-control">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Minimal Pembelian</label>
-                                                <input type="number" name="" id="" value="0" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Diskon</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Pembelian untuk Dapat Diskon</label>
-                                                <input type="number" name="" id="" value="999" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Ongkos Kirim</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Pembelian untuk Gratis Ongkos Kirim</label>
-                                                <input type="number" name="" id="" value="999" class="form-control">
+                                                <input type="number" name="agent_min_order" id="" value="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-4 mb-3">
+                                    <div class="col-12 col-lg-3 mb-3">
                                         <div class="mb-3">
                                             <input class="form-check-input" name="is-pelanggan-industri" type="checkbox" value="" id="check-pelanggan-industri">
                                             <label class="form-check-label" for="check-pelanggan-industri">
@@ -134,62 +87,14 @@
                                         <div id="form-pelanggan-industri" style="display: none">
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Harga</label>
-                                                <input type="number" name="" id="" class="form-control">
+                                                <input type="number" name="industrial_price" id="" class="form-control">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="" class="form-label">Minimal Pembelian</label>
-                                                <input type="number" name="" id="" value="0" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Diskon</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Pembelian untuk Dapat Diskon</label>
-                                                <input type="number" name="" id="" value="999" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Ongkos Kirim</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Minimal Pembelian untuk Gratis Ongkos Kirim</label>
-                                                <input type="number" name="" id="" value="999" class="form-control">
+                                                <input type="number" name="industrial_min_order" id="" value="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-4 mb-3">
-                                        <div class="mb-3">
-                                            <input class="form-check-input" name="is-pelanggan-droppoint" type="checkbox" value="" id="check-pelanggan-agen">
-                                            <label class="form-check-label" for="check-pelanggan-droppoint">
-                                              Kirim ke pelanggan Droppoint
-                                            </label>
-                                        </div>
-                                        <div id="form-pelanggan-droppoint" style="display: none">
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Pilih Droppoint</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Harga</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Diskon</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Jumlah</label>
-                                                <input type="number" name="" id="" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <button type="button" class="btn btn-light me-2">Batal</button>
