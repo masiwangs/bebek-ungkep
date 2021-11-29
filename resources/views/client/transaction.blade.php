@@ -23,7 +23,7 @@
                                         @foreach ($baskets as $basket)    
                                         <tr>
                                             <td class="font-semibold">
-                                                <a href="">{{ $basket->invoice->id }}</a>
+                                                <a href="">{{ $basket->invoice->code }}</a>
                                             </td>
                                             <td>
                                                 Rp{{ $basket->invoice->product_bill + $basket->invoice->shipment_bill }},-

@@ -6,6 +6,7 @@ use App\Models\Basket;
 use App\Models\Invoice;
 use App\Models\Postalcode;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class CheckoutForm extends Component
@@ -63,6 +64,7 @@ class CheckoutForm extends Component
 
     public function submit() {
         Invoice::create([
+            'code' => 'INV'.Str::upper(Str::random(3)).Carbon::now()->timestamp,
             'user_id' => 1,
             'basket_id' => $this->basket->id,
             'shipment_postalcode' => $this->shipment_postalcode,
@@ -75,7 +77,6 @@ class CheckoutForm extends Component
             'shipment_bill' => $this->shipment_bill,
             'discount' => $this->discount,
         ]);
-        
         $this->basket->update([
             'is_checked_out' => 1,
             'checked_out_at' => Carbon::now()

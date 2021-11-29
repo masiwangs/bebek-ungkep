@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="content-wrapper container">
         <div class="page-heading">
-            <h3>Daftar Produk</h3>
+            <h3 class="h3">Daftar Pesanan</h3>
         </div>
         <div class="page-content">
             <section class="row">
@@ -24,7 +24,7 @@
                                         @foreach ($baskets as $basket)
                                         <tr>
                                             <td>{{ $basket->user->name }}</td>
-                                            <td>{{ $basket->invoice->id }}</td>
+                                            <td>{{ $basket->invoice->code }}</td>
                                             <td>
                                                 <ul>
                                                     @foreach ($basket->products as $basket_product)
@@ -42,19 +42,23 @@
 
                                                 ])) }}
                                             </td>
+                                            
                                             <td>
-                                                {{ 
-                                                    $basket->is_done
-                                                        ? 'Selesai'
-                                                        : $basket->is_sent
-                                                            ? 'Sedang dikirim'
-                                                            : $basket->is_paid
-                                                                ? 'Sedang dikemas'
-                                                                : 'Menunggu pembayaran'
-                                                        
-                                                }}
+                                                @if ($basket->is_done)
+                                                    Selesai
+                                                @elseif ($basket->is_sent)
+                                                    Sedang dikirim
+                                                @elseif ($basket->is_payment_confirmed)
+                                                    Sedang dikemas
+                                                @elseif ($basket->is_paid)
+                                                    Menunggu konfirmasi pembayaran
+                                                @else
+                                                    Menunggu pembayaran
+                                                @endif
                                             </td>
-                                            <td>Detail pesanan</td>
+                                            <td>
+                                                <a href="{{ route('admin.order.show', ['basket' => $basket->id]) }}" class="text-warning">Detail pesanan</a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

@@ -19,7 +19,8 @@ class Invoice extends Model
         'shipment_road',
         'product_bill',
         'shipment_bill',
-        'discount'
+        'discount',
+        'code'
     ];
 
     public function basket() {

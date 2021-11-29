@@ -59,6 +59,12 @@ class AuthController extends Controller
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
+
+            // if droppoint
+            if($user->role_id == 4) {
+                return redirect()->route('droppoint.home');
+            }
+            
             return redirect()->route('client.index');
         }
 

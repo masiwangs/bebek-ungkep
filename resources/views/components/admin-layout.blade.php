@@ -109,7 +109,28 @@
                                                 <a href="{{ route('admin.user.list') }}" class='submenu-link'>Daftar Pelanggan</a>
                                             </li>
                                             <li class="submenu-item  ">
-                                                <a href="{{ route('admin.user.new') }}" class='submenu-link'>Agen/Reseller Baru</a>
+                                                <a href="{{ route('admin.user.new') }}" class='submenu-link'>Agen Baru</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item  has-sub">
+                                <a href="#" class='menu-link text-dark'>
+                                    <i class="bi bi-pin-map-fill"></i>
+                                    <span>Droppoint</span>
+                                </a>
+                                <div class="submenu">
+                                    <div class="submenu-group-wrapper">
+                                        <ul class="submenu-group">
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.user.index') }}" class='submenu-link'>Overview</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.droppoint.list') }}" class='submenu-link'>Daftar Droppint</a>
+                                            </li>
+                                            <li class="submenu-item  ">
+                                                <a href="{{ route('admin.droppoint.create') }}" class='submenu-link'>Upload Droppoint Baru</a>
                                             </li>
                                         </ul>
                                     </div>

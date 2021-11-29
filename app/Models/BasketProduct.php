@@ -15,6 +15,7 @@ class BasketProduct extends Model
         'product_image',
         'product_description',
         'product_price',
-        'product_qty'
+        'product_qty',
+        'product_discount'
     ];
 }

@@ -2,7 +2,7 @@
     <div class="content-wrapper container">
         <div class="page-content">
             <div class="page-heading">
-                <h3>Pesanan Anda</h3>
+                <h3 class="h3 text-dark">Pesanan Anda</h3>
             </div>
             <section class="row">
                 <div class="col-12 col-lg-9">
@@ -12,7 +12,6 @@
                                 <table class="table" style="font-size:.8rem">
                                     <thead>
                                         <tr>
-                                            <th>Waktu</th>
                                             <th>Invoice</th>
                                             <th>Produk</th>
                                             <th class="text-nowrap">Jumlah Tagihan</th>
@@ -23,9 +22,8 @@
                                     <tbody>
                                         @foreach ($baskets as $basket)
                                         <tr>
-                                            <td class="text-nowrap">{{ date('d m y H:i:s', strtotime($basket->checked_out_at)) }}</td>
                                             <td class="font-semibold">
-                                                <a href="">{{ $basket->invoice->id }}</a>
+                                                <a href="" class="text-danger">{{ $basket->invoice->code }}</a>
                                             </td>
                                             <td>
                                                 <ul>
@@ -55,16 +53,17 @@
                                                 ])) }}
                                             </td>
                                             <td>
-                                                {{ 
-                                                    $basket->is_done
-                                                        ? 'Selesai'
-                                                        : $basket->is_sent
-                                                            ? 'Sedang dikirim'
-                                                            : $basket->is_paid
-                                                                ? 'Sedang dikemas'
-                                                                : 'Menunggu pembayaran'
-                                                        
-                                                }}
+                                                @if ($basket->is_done)
+                                                    Selesai
+                                                @elseif ($basket->is_sent)
+                                                    Sedang dikirim
+                                                @elseif ($basket->is_payment_confirmed)
+                                                    Sedang dikemas
+                                                @elseif ($basket->is_paid)
+                                                    Menunggu konfirmasi pembayaran
+                                                @else
+                                                    Menunggu pembayaran
+                                                @endif
                                             </td>
                                             @else
                                             <td colspan="3">Harap selesaikan pesanan Anda</td>

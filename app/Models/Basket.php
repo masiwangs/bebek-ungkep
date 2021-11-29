@@ -13,12 +13,16 @@ class Basket extends Model
         'user_id',
         'is_checked_out',
         'is_paid',
+        'is_payment_confirmed',
         'is_sent',
         'is_done',
         'checked_out_at',
         'paid_at',
+        'payment_confirmed_at',
         'sent_at',
         'done_at',
+        'shipment_service',
+        'shipment_receipt'
     ];
 
     public function products() {
@@ -31,5 +35,9 @@ class Basket extends Model
 
     public function user() {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function purchase_order() {
+        return $this->hasOne(PurchaseOrder::class, 'basket_id');
     }
 }

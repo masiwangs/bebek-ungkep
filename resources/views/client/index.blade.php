@@ -17,9 +17,9 @@
                         </div>
                     </div>
                     
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <h3 class="h3 text-dark">Diskon Spesial!!</h3>
-                    </div>
+                    </div> --}}
                     {{-- <div class="container">
                         <div class="row">
                             <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel"  data-interval="1000">

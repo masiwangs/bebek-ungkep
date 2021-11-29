@@ -15,10 +15,10 @@ class ClientBasket extends Component
 
     public function mount() {
         // TODO: select basket by user_id
-        $this->active_basket = Basket::where('user_id', 1)->where('is_checked_out', 0)->first();
+        $this->active_basket = Basket::where('user_id', auth()->id())->where('is_checked_out', 0)->first();
         if(!$this->active_basket) {
             $this->active_basket = Basket::create([
-                'user_id' => 1
+                'user_id' => auth()->id()
             ]);
         }
     }
@@ -27,9 +27,17 @@ class ClientBasket extends Component
         // TODO: price & min order sesuai role
         $basket_product = BasketProduct::where('basket_id', $this->active_basket->id)->where('product_code', $product->code)->first();
         if($basket_product) {
-            $basket_product->update([
-                'product_qty' => $basket_product->product_qty + 1
-            ]);
+            if($basket_product->product_qty >= $product->reseller_min_order) {
+                $basket_product->update([
+                    'product_price' => $product->reseller_price,
+                    'product_qty' => $basket_product->product_qty + 1
+                ]);
+            } else {
+                $basket_product->update([
+                    'product_price' => $product->regular_price,
+                    'product_qty' => $basket_product->product_qty + 1
+                ]);
+            }
         } else {
             BasketProduct::create([
                 'basket_id' => $this->active_basket->id,
@@ -47,16 +55,32 @@ class ClientBasket extends Component
 
     public function increaseQty($id) {
         $basket_product = BasketProduct::find($id);
-        $basket_product->update([
-            'product_qty' => $basket_product->product_qty +1
-        ]);
+        $product = Product::where('code', $basket_product->product_code)->first();
+        if($basket_product->product_qty >= $product->reseller_min_order - 1) {
+            $basket_product->update([
+                'product_price' => $product->reseller_price,
+                'product_qty' => $basket_product->product_qty +1
+            ]);
+        } else {
+            $basket_product->update([
+                'product_price' => $product->regular_price,
+                'product_qty' => $basket_product->product_qty +1
+            ]);
+        }
         return $this->mount();
     }
 
     public function decreaseQty($id) {
         $basket_product = BasketProduct::find($id);
-        if($basket_product->product_qty > 1) {
+        $product = Product::where('code', $basket_product->product_code)->first();
+        if($basket_product->product_qty > $product->reseller_min_order) {
             $basket_product->update([
+                'product_price' => $product->reseller_price,
+                'product_qty' => $basket_product->product_qty -1
+            ]);
+        } else {
+            $basket_product->update([
+                'product_price' => $product->regular_price,
                 'product_qty' => $basket_product->product_qty -1
             ]);
         }

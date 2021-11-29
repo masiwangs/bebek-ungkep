@@ -1,4 +1,4 @@
-<x-client-layout>
+<x-admin-layout>
     <div class="content-wrapper container">
         <div class="page-content">
             <div class="row d-flex align-items-center" style="min-height: 70vh">
@@ -21,15 +21,15 @@
                                 <div class="mb-3">
                                     <a href="#" class="text-secondary"><i class="bi bi-question-circle-fill"></i> Lupa password</a>
                                 </div>
-                                <button type="submit" class="btn btn-danger btn-block">Login</button>
+                                <button type="submit" class="btn btn-dark btn-block">Login</button>
                             </form>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <p class="mb-0">Belum punya akun? <a href="{{ route('client.register') }}" class="text-danger">Daftar sekarang.</a></p>
+                        <p class="mb-0">Belum punya akun? <a href="{{ route('client.register') }}" class="text-warning">Daftar sekarang.</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</x-client-layout>
+</x-admin-layout>

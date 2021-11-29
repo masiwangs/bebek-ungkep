@@ -48,8 +48,16 @@ class User extends Authenticatable
         return $this->hasMany(Basket::class, 'user_id');
     }
 
+    public function purchase_orders() {
+        return $this->hasMany(PurchaseOrder::class, 'user_id');
+    }
+
     public function roles() {
         return $this->hasMany(UserRole::class, 'user_id');
+    }
+
+    public function drop_point_address() {
+        return $this->hasOne(DroppointAddress::class, 'drop_point_id');
     }
 
     public function active_role() {
