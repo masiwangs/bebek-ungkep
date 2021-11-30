@@ -15,11 +15,13 @@ class ClientBasket extends Component
 
     public function mount() {
         // TODO: select basket by user_id
-        $this->active_basket = Basket::where('user_id', auth()->id())->where('is_checked_out', 0)->first();
-        if(!$this->active_basket) {
-            $this->active_basket = Basket::create([
-                'user_id' => auth()->id()
-            ]);
+        if(auth()->check()) {
+            $this->active_basket = Basket::where('user_id', auth()->id())->where('is_checked_out', 0)->first();
+            if(!$this->active_basket) {
+                $this->active_basket = Basket::create([
+                    'user_id' => auth()->id()
+                ]);
+            }
         }
     }
 

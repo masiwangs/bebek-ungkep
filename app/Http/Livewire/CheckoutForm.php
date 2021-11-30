@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Basket;
 use App\Models\Invoice;
 use App\Models\Postalcode;
+use App\Models\ShipmentPricing;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Livewire\Component;
@@ -20,14 +21,17 @@ class CheckoutForm extends Component
            $shipment_village,
            $shipment_road,
            $discount;
-    public $shipment_bill= 40000;
+    public $shipment_bill;
     public $product_bill = 0;
     public $villages;
     public $sent_from;
     public $total_bill;
+    public $bill_error = false;
 
     public function mount() {
-        $this->basket = Basket::where('user_id', 1)->where('is_checked_out', 0)->first();
+        if(auth()->check()){
+            $this->basket = Basket::where('user_id', auth()->id())->where('is_checked_out', 0)->first();
+        }
         foreach ($this->basket->products as $basket_product) {
             $this->product_bill += $basket_product->product_price * $basket_product->product_qty;
         }
@@ -41,6 +45,8 @@ class CheckoutForm extends Component
             $this->shipment_subdistrict = $addresses[0]->kecamatan;
             $this->villages = $addresses;
         }
+        $this->sent_from = null;
+        $this->bill_error = 'Pengiriman tidak tersedia di wilayah ini';
     }
 
     public function countTotalBill() {
@@ -48,13 +54,27 @@ class CheckoutForm extends Component
     }
 
     public function countShipmentBill($origin, $destination) {
-        if($origin == 'SEMARANG' and $destination == 'JAWA TENGAH') {
-            $this->shipment_bill = 20000;
+        $shipment_price = ShipmentPricing::where('origin', $this->sent_from)
+            ->where('destination', 'like', '%'.$this->shipment_city.'%')
+            ->first();
+        if(!$shipment_price) {
+            return $this->bill_error = 'Pengiriman tidak tersedia di wilayah ini';
+        } else {
+            $this->bill_error = false;
+        }
+        $this->shipment_bill = 0;
+        $product_count = 0;
+        foreach ($this->basket->products as $basket_product) {
+            $product_count += $basket_product->product_qty;
+            $this->shipment_bill += $shipment_price->initial_price * ceil($basket_product->product_qty * 0.6);
+        }
+        if($product_count >= 5) {
+            $this->shipment_bill = 0;
         }
         $this->countTotalBill();
     }
 
-    public function updatedShipmentProvince($value) {
+    public function updatedShipmentCity($value) {
         $this->countShipmentBill($this->sent_from, $value);
     }
 

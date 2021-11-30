@@ -16,17 +16,26 @@
                                             <th>Tipe</th>
                                             <th>Email</th>
                                             <th>Telefon</th>
-                                            <th>Alamat</th>
+                                            <th>KTP</th>
+                                            <th>KK</th>
+                                            <th>Scan KTP</th>
+                                            <th>Foto Selfie</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($new_proposals as $proposal)
                                         <tr>
-                                            <td>Maulana</td>
-                                            <td>Agen</td>
-                                            <td>maulanaichwana@gmail.com</td>
-                                            <td>088233010696</td>
-                                            <td>Gendol, RT 26, Dukuh, Tangen, Sragen 57261</td>
+                                            <td>{{ $proposal->user->name }}</td>
+                                            <td>{{ $proposal->as }}</td>
+                                            <td>{{ $proposal->user->email }}
+                                            <td>{{ $proposal->user->phone }}
+                                            <td>{{ $proposal->ktp }}</td>
+                                            <td>{{ $proposal->kk }}</td>
+                                            <td><a class="text-warning" href="{{ \Storage::url($proposal->file_ktp) }}">Lihat</a></td>
+                                            <td><a class="text-warning" href="{{ \Storage::url($proposal->file_selfie) }}">Lihat</a></td>
+                                            <td><a href="{{ route('admin.user.new.confirm', ['proposal' => $proposal->id]) }}" class="btn btn-sm btn-warning text-dark">Setujui</a></td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

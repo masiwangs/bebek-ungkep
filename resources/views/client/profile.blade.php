@@ -83,7 +83,7 @@
                                 <a href="{{ route('client.security') }}" class="text-danger">Keamanan</a>
                             </div>
                             <div class="mb-3">
-                                <a href="" class="text-danger">Pengajuan Agen</a>
+                                <a href="{{ route('client.proposal.agent.create') }}" class="text-danger">Pengajuan Agen</a>
                             </div>
                             <div class="mb-3">
                                 <a href="" class="text-danger">Pengajuan Heureka/Industri</a>

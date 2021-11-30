@@ -88,7 +88,8 @@
                         <label for="" class="col-form-label col-2 d-flex justify-content-end">Dikirim dari</label>
                         <div class="col-9">
                             <select class="form-select" aria-label="Default select example" wire:model="sent_from">
-                                <option value="JABODETABEK">JABODETABEK</option>
+                                <option>Pilih Droppoint</option>
+                                <option value="DEPOK">DEPOK</option>
                                 <option value="SEMARANG">SEMARANG</option>
                                 <option value="BLITAR">BLITAR</option>
                             </select>
@@ -120,10 +121,14 @@
                 <hr>
                 <div class="mb-4">
                     <label for="" class="form-label fw-bold">TOTAL</label>
-                    @if($total_bill)
-                    <p class="mb-0">Rp{{ number_format($total_bill, 0, ',', '.') }},-</p>
+                    @if(!$bill_error)
+                        @if($total_bill)
+                        <p class="mb-0">Rp{{ number_format($total_bill, 0, ',', '.') }},-</p>
+                        @else
+                        <p class="mb-0 text-danger">Lengkapi data pemesanan.</p>
+                        @endif
                     @else
-                    <p class="mb-0 text-danger">Lengkapi data pemesanan.</p>
+                        <p class="mb-0 text-danger">{{ $bill_error }}</p>
                     @endif
                 </div>
                 <div class="">

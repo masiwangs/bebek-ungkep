@@ -5,11 +5,13 @@ use App\Http\Controllers\Admin\DroppointController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Client\AuthController;
 use App\Http\Controllers\Client\CheckoutController;
 use App\Http\Controllers\Client\HomeController as ClientHomeController;
 use App\Http\Controllers\Client\OrderController;
 use App\Http\Controllers\Client\PaymentController;
+use App\Http\Controllers\Client\ProposalController;
 use App\Http\Controllers\Client\TransactionController;
 use App\Http\Controllers\Client\UserController;
 use App\Http\Controllers\Droppoint\HomeController as DroppointHomeController;
@@ -62,12 +64,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
             Route::get('create', [DroppointController::class, 'create'])->name('admin.droppoint.create');
             Route::post('create', [DroppointController::class, 'store'])->name('admin.droppoint.create');
         });
+
+        Route::prefix('pelanggan')->group(function() {
+            Route::get('proposal', [AdminUserController::class, 'listProposal'])->name('admin.user.new');
+            Route::get('proposal/{proposal}', [AdminUserController::class, 'acceptProposal'])->name('admin.user.new.confirm');
+        });
     });
     
     
     Route::view('/admin/pelanggan', 'admin.user.index')->name('admin.user.index');
     Route::view('/admin/pelanggan/daftar-pelanggan', 'admin.user.list')->name('admin.user.list');
-    Route::view('/admin/pelanggan/baru', 'admin.user.new')->name('admin.user.new');
     
     Route::view('/admin/transaksi-keuangan', 'admin.transaction.index')->name('admin.transaction.index');
     Route::view('/admin/transaksi-keuangan/baru', 'admin.transaction.new')->name('admin.transaction.new');
@@ -109,6 +115,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('akun/keamanan', [UserController::class, 'security'])->name('client.security');
     Route::post('akun/keamanan', [UserController::class, 'updatePassword']);
     Route::prefix('proposal')->group(function() {
-        
+        Route::get('agen', [ProposalController::class, 'agentCreate'])->name('client.proposal.agent.create');
+        Route::post('agen', [ProposalController::class, 'agentStore'])->name('client.proposal.agent.create');
     });
 });
